@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Django Page</title>
-</head>
-<body>
-    <h1>Hello Django!</h1>
-</body>
+<html>
+    <head>
+        <title>Django Page</title>
+    </head>
+    <body>
+        <h1>签到登陆</h1>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--本来输出的时候html中文乱码，增加上面一行后不乱码了-->
+        <form method="post" action="/login_action/">
+            <input name="username" type="text" placeholder="用户名" ><br>
+            <input name="password" type="password" placeholder="密码" ><br>
+            {{ error }}<br>
+            <button id="btn" type="submit">登陆</button>
+            {% csrf_token %}
+        </form>
+    </body>
 </html>
+
+
+
+
