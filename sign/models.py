@@ -7,7 +7,7 @@ class Event(models.Model):
     status = models.BooleanField()
     address = models.CharField(max_length=200)
     start_time =models.DateTimeField('event time')
-    creat_time = models.DateTimeField(auto_now=True)
+    create_time = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
